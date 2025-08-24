@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: guild-master-idle
+    env: node
+    buildCommand: pnpm install && pnpm run build
+    startCommand: pnpm run preview
+    plan: free
+    envVars:
+      - key: NODE_VERSION
+        value: 18 
